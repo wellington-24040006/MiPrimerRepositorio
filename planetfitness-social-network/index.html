@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlanetFitness - Red Social Ofdicial de Planetitness</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-dumbbell"></i>
+                <span>PlanetFitness</span>
+            </div>
+            <nav class="nav-menu">
+                <a href="#" class="nav-link active" data-section="home">
+                    <i class="fas fa-home"></i> Inicio
+                </a>
+                <a href="#" class="nav-link" data-section="routines">
+                    <i class="fas fa-list"></i> Rutinas
+                </a>
+                <a href="#" class="nav-link" data-section="exercises">
+                    <i class="fas fa-play"></i> Ejercicios
+                </a>
+                <a href="#" class="nav-link" data-section="profile">
+                    <i class="fas fa-user"></i> Perfil
+                </a>
+            </nav>
+            <div class="nav-actions">
+                <button class="btn-icon" onclick="toggleNotifications()">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-badge">3</span>
+                </button>
+                <button class="btn-primary" onclick="openCreatePost()">
+                    <i class="fas fa-plus"></i> Nuevo Post
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Home Section -->
+            <section id="home" class="section active">
+                <div class="content-grid">
+                    <!-- Sidebar -->
+                    <aside class="sidebar">
+                        <div class="user-card">
+                            <div class="user-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <h3>Wéllington Alvarez</h3>
+                            <p>@welly2.0.0.4</p>
+                            <div class="user-stats">
+                                <div class="stat">
+                                    <span class="number">127</span>
+                                    <span class="label">Posts</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="number">1.2K</span>
+                                    <span class="label">Seguidores</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="number">890</span>
+                                    <span class="label">Siguiendo</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="trending-card">
+                            <h3>Tendencias</h3>
+                            <div class="trending-item">
+                                <span class="hashtag">#LunesDeMusculo</span>
+                                <span class="posts">2.3K posts</span>
+                            </div>
+                            <div class="trending-item">
+                                <span class="hashtag">#CardioChallenge</span>
+                                <span class="posts">1.8K posts</span>
+                            </div>
+                            <div class="trending-item">
+                                <span class="hashtag">#TransformacionJueves</span>
+                                <span class="posts">945 posts</span>
+                            </div>
+                        </div>
+                    </aside>
+
+                    <!-- Feed -->
+                    <div class="feed">
+                        <!-- Create Post -->
+                        <div class="create-post-card">
+                            <div class="create-post-header">
+                                <div class="user-avatar small">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <input type="text" placeholder="¿Qué tal fue tu entrenamiento hoy?" readonly onclick="openCreatePost()">
+                            </div>
+                            <div class="create-post-actions">
+                                <button class="action-btn" onclick="openCreatePost()">
+                                    <i class="fas fa-image"></i> Foto
+                                </button>
+                                <button class="action-btn" onclick="openCreatePost()">
+                                    <i class="fas fa-video"></i> Video
+                                </button>
+                                <button class="action-btn" onclick="openCreatePost()">
+                                    <i class="fas fa-dumbbell"></i> Rutina
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Posts -->
+                        <div class="post-card">
+                            <div class="post-header">
+                                <div class="user-info">
+                                    <div class="user-avatar small">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <div>
+                                        <h4>María García</h4>
+                                        <span class="post-time">hace 2 horas</span>
+                                    </div>
+                                </div>
+                                <button class="btn-icon">
+                                    <i class="fas fa-ellipsis-h"></i>
+                                </button>
+                            </div>
+                            <div class="post-content">
+                                <p>¡Terminé mi primera sesión de deadlifts con 100kg! 💪 Gracias a todos por el apoyo y los consejos. #DeadliftProgress #Fuerza</p>
+                                <div class="post-image">
+                                    <div class="placeholder-image">
+                                        <i class="fas fa-image"></i>
+                                        <span>Foto del entrenamiento</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post-stats">
+                                <span>❤️ 45 likes</span>
+                                <span>💬 12 comentarios</span>
+                                <span>🔄 8 compartidos</span>
+                            </div>
+                            <div class="post-actions">
+                                <button class="action-btn">
+                                    <i class="far fa-heart"></i> Like
+                                </button>
+                                <button class="action-btn">
+                                    <i class="far fa-comment"></i> Comentar
+                                </button>
+                                <button class="action-btn">
+                                    <i class="fas fa-share"></i> Compartir
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="post-card">
+                            <div class="post-header">
+                                <div class="user-info">
+                                    <div class="user-avatar small">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <div>
+                                        <h4>Carlos López</h4>
+                                        <span class="post-time">hace 4 horas</span>
+                                    </div>
+                                </div>
+                                <button class="btn-icon">
+                                    <i class="fas fa-ellipsis-h"></i>
+                                </button>
+                            </div>
+                            <div class="post-content">
+                                <p>Rutina de pecho completa para principiantes 📋 Guarda este post para después!</p>
+                                <div class="routine-card">
+                                    <h4><i class="fas fa-dumbbell"></i> Rutina: Pecho Principiante</h4>
+                                    <div class="exercise-list">
+                                        <div class="exercise-item">
+                                            <span>Press de banca</span>
+                                            <span>3x8-10</span>
+                                        </div>
+                                        <div class="exercise-item">
+                                            <span>Flexiones</span>
+                                            <span>3x12-15</span>
+                                        </div>
+                                        <div class="exercise-item">
+                                            <span>Aperturas con mancuernas</span>
+                                            <span>3x10-12</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post-stats">
+                                <span>❤️ 89 likes</span>
+                                <span>💬 23 comentarios</span>
+                                <span>🔄 34 compartidos</span>
+                            </div>
+                            <div class="post-actions">
+                                <button class="action-btn">
+                                    <i class="far fa-heart"></i> Like
+                                </button>
+                                <button class="action-btn">
+                                    <i class="far fa-comment"></i> Comentar
+                                </button>
+                                <button class="action-btn">
+                                    <i class="fas fa-share"></i> Compartir
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Sidebar -->
+                    <aside class="right-sidebar">
+                        <div class="suggestions-card">
+                            <h3>Personas que podrías conocer</h3>
+                            <div class="suggestion-item">
+                                <div class="user-avatar small">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="suggestion-info">
+                                    <h4>Wéllington Adrian</h4>
+                                    <span>Entrenadora Personal</span>
+                                </div>
+                                <button class="btn-follow">Seguir</button>
+                            </div>
+                            <div class="suggestion-item">
+                                <div class="user-avatar small">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="suggestion-info">
+                                    <h4>David Belmares</h4>
+                                    <span>Coach Nutricional</span>
+                                </div>
+                                <button class="btn-follow">Seguir</button>
+                            </div>
+                        </div>
+
+                        <div class="events-card">
+                            <h3>Próximos Eventos</h3>
+                            <div class="event-item">
+                                <div class="event-date">
+                                    <span class="day">25</span>
+                                    <span class="month">Sep</span>
+                                </div>
+                                <div class="event-info">
+                                    <h4>Clase de Yoga</h4>
+                                    <span>18:00 - Sala 2</span>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-date">
+                                    <span class="day">28</span>
+                                    <span class="month">Sep</span>
+                                </div>
+                                <div class="event-info">
+                                    <h4>Competencia Funcional</h4>
+                                    <span>10:00 - Área Principal</span>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </section>
+
+            <!-- Routines Section -->
+            <section id="routines" class="section">
+                <div class="section-header">
+                    <h2>Rutinas de Entrenamiento</h2>
+                    <button class="btn-primary">
+                        <i class="fas fa-plus"></i> Nueva Rutina
+                    </button>
+                </div>
+                
+                <div class="filter-tabs">
+                    <button class="tab-btn active">Todas</button>
+                    <button class="tab-btn">Fuerza</button>
+                    <button class="tab-btn">Cardio</button>
+                    <button class="tab-btn">Funcional</button>
+                    <button class="tab-btn">Mis Rutinas</button>
+                </div>
+
+                <div class="routines-grid">
+                    <div class="routine-card-large">
+                        <div class="routine-header">
+                            <h3>Push Pull Legs</h3>
+                            <div class="routine-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.8</span>
+                            </div>
+                        </div>
+                        <p class="routine-description">Rutina clásica de 6 días para ganancia de masa muscular</p>
+                        <div class="routine-info">
+                            <span><i class="fas fa-clock"></i> 75 min</span>
+                            <span><i class="fas fa-fire"></i> Intermedio</span>
+                            <span><i class="fas fa-users"></i> 1.2K seguidores</span>
+                        </div>
+                        <div class="routine-tags">
+                            <span class="tag">Fuerza</span>
+                            <span class="tag">Hipertrofia</span>
+                        </div>
+                        <button class="btn-outline">Ver Rutina</button>
+                    </div>
+
+                    <div class="routine-card-large">
+                        <div class="routine-header">
+                            <h3>HIIT Cardio Blast</h3>
+                            <div class="routine-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.6</span>
+                            </div>
+                        </div>
+                        <p class="routine-description">Entrenamiento intensivo para quemar grasa en poco tiempo</p>
+                        <div class="routine-info">
+                            <span><i class="fas fa-clock"></i> 30 min</span>
+                            <span><i class="fas fa-fire"></i> Avanzado</span>
+                            <span><i class="fas fa-users"></i> 856 seguidores</span>
+                        </div>
+                        <div class="routine-tags">
+                            <span class="tag">Cardio</span>
+                            <span class="tag">Pérdida de grasa</span>
+                        </div>
+                        <button class="btn-outline">Ver Rutina</button>
+                    </div>
+
+                    <div class="routine-card-large">
+                        <div class="routine-header">
+                            <h3>Funcional Crossfit</h3>
+                            <div class="routine-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.7</span>
+                            </div>
+                        </div>
+                        <p class="routine-description">Movimientos funcionales para mejorar tu condición física</p>
+                        <div class="routine-info">
+                            <span><i class="fas fa-clock"></i> 45 min</span>
+                            <span><i class="fas fa-fire"></i> Intermedio</span>
+                            <span><i class="fas fa-users"></i> 634 seguidores</span>
+                        </div>
+                        <div class="routine-tags">
+                            <span class="tag">Funcional</span>
+                            <span class="tag">Resistencia</span>
+                        </div>
+                        <button class="btn-outline">Ver Rutina</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Exercises Section -->
+            <section id="exercises" class="section">
+                <div class="section-header">
+                    <h2>Biblioteca de Ejercicios</h2>
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Buscar ejercicios...">
+                    </div>
+                </div>
+
+                <div class="exercise-categories">
+                    <button class="category-btn active">Todos</button>
+                    <button class="category-btn">Pecho</button>
+                    <button class="category-btn">Espalda</button>
+                    <button class="category-btn">Piernas</button>
+                    <button class="category-btn">Hombros</button>
+                    <button class="category-btn">Brazos</button>
+                    <button class="category-btn">Core</button>
+                </div>
+
+                <div class="exercises-grid">
+                    <div class="exercise-card">
+                        <div class="exercise-thumbnail">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                        <div class="exercise-info">
+                            <h3>Press de Banca</h3>
+                            <p>Ejercicio compuesto para desarrollo del pecho</p>
+                            <div class="exercise-details">
+                                <span class="muscle-group">Pecho</span>
+                                <span class="difficulty">Intermedio</span>
+                            </div>
+                            <button class="btn-outline small">Ver Ejercicio</button>
+                        </div>
+                    </div>
+
+                    <div class="exercise-card">
+                        <div class="exercise-thumbnail">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                        <div class="exercise-info">
+                            <h3>Sentadillas</h3>
+                            <p>Movimiento fundamental para piernas y glúteos</p>
+                            <div class="exercise-details">
+                                <span class="muscle-group">Piernas</span>
+                                <span class="difficulty">Principiante</span>
+                            </div>
+                            <button class="btn-outline small">Ver Ejercicio</button>
+                        </div>
+                    </div>
+
+                    <div class="exercise-card">
+                        <div class="exercise-thumbnail">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                        <div class="exercise-info">
+                            <h3>Peso Muerto</h3>
+                            <p>Ejercicio completo para cadena posterior</p>
+                            <div class="exercise-details">
+                                <span class="muscle-group">Espalda</span>
+                                <span class="difficulty">Avanzado</span>
+                            </div>
+                            <button class="btn-outline small">Ver Ejercicio</button>
+                        </div>
+                    </div>
+
+                    <div class="exercise-card">
+                        <div class="exercise-thumbnail">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                        <div class="exercise-info">
+                            <h3>Flexiones</h3>
+                            <p>Ejercicio de peso corporal para pecho y brazos</p>
+                            <div class="exercise-details">
+                                <span class="muscle-group">Pecho</span>
+                                <span class="difficulty">Principiante</span>
+                            </div>
+                            <button class="btn-outline small">Ver Ejercicio</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Profile Section -->
+            <section id="profile" class="section">
+                <div class="profile-header">
+                    <div class="profile-banner">
+                        <div class="profile-avatar-large">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                    <div class="profile-info">
+                        <h2>Wéllington Alvarez</h2>
+                        <p>@welly2.0.0.4</p>
+                        <p class="bio">Jefe De Grupo del 4TIDSMB  | Lider Faccionista AS | Mamado/r Profesional</p>
+                        <div class="profile-stats">
+                            <div class="stat">
+                                <span class="number">127</span>
+                                <span class="label">Posts</span>
+                            </div>
+                            <div class="stat">
+                                <span class="number">749.2K</span>
+                                <span class="label">Seguidores</span>
+                            </div>
+                            <div class="stat">
+                                <span class="number">201</span>
+                                <span class="label">Siguiendo</span>
+                            </div>
+                        </div>
+                        <button class="btn-outline">Editar Perfil</button>
+                    </div>
+                </div>
+
+                <div class="profile-tabs">
+                    <button class="tab-btn active">Posts</button>
+                    <button class="tab-btn">Rutinas</button>
+                    <button class="tab-btn">Logros</button>
+                    <button class="tab-btn">Estadísticas</button>
+                </div>
+
+                <div class="profile-content">
+                    <div class="posts-grid">
+                        <div class="post-thumbnail">
+                            <div class="placeholder-image">
+                                <i class="fas fa-image"></i>
+                            </div>
+                            <div class="post-stats-overlay">
+                                <span><i class="fas fa-heart"></i> 45</span>
+                                <span><i class="fas fa-comment"></i> 12</span>
+                            </div>
+                        </div>
+                        <div class="post-thumbnail">
+                            <div class="placeholder-image">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <div class="post-stats-overlay">
+                                <span><i class="fas fa-heart"></i> 89</span>
+                                <span><i class="fas fa-comment"></i> 23</span>
+                            </div>
+                        </div>
+                        <div class="post-thumbnail">
+                            <div class="placeholder-image">
+                                <i class="fas fa-image"></i>
+                            </div>
+                            <div class="post-stats-overlay">
+                                <span><i class="fas fa-heart"></i> 67</span>
+                                <span><i class="fas fa-comment"></i> 15</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Create Post Modal -->
+    <div id="createPostModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Crear nueva publicación</h3>
+                <button class="close-btn" onclick="closeCreatePost()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="user-info">
+                    <div class="user-avatar small">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <span>Wéllington Alvarez</span>
+                </div>
+                <textarea placeholder="¿Qué tal fue tu entrenamiento hoy?"></textarea>
+                <div class="post-options">
+                    <button class="option-btn">
+                        <i class="fas fa-image"></i> Agregar foto
+                    </button>
+                    <button class="option-btn">
+                        <i class="fas fa-video"></i> Agregar video
+                    </button>
+                    <button class="option-btn">
+                        <i class="fas fa-dumbbell"></i> Agregar rutina
+                    </button>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-outline" onclick="closeCreatePost()">Cancelar</button>
+                <button class="btn-primary">Publicar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notifications Dropdown -->
+    <div id="notificationsDropdown" class="notifications-dropdown">
+        <div class="notifications-header">
+            <h3>Notificaciones</h3>
+            <button class="btn-text">Marcar como leídas</button>
+        </div>
+        <div class="notifications-list">
+            <div class="notification-item unread">
+                <div class="user-avatar tiny">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="notification-content">
+                    <p><strong>María García</strong> le gustó tu publicación</p>
+                    <span class="time">hace 2 min</span>
+                </div>
+            </div>
+            <div class="notification-item unread">
+                <div class="user-avatar tiny">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="notification-content">
+                    <p><strong>Carlos López</strong> comentó en tu rutina</p>
+                    <span class="time">hace 15 min</span>
+                </div>
+            </div>
+            <div class="notification-item">
+                <div class="user-avatar tiny">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="notification-content">
+                    <p><strong>Cn Adrian</strong> empezó a seguirte</p>
+                    <span class="time">hace 1 hora</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
